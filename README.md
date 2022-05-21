@@ -121,7 +121,6 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 	```bash
 	$ CROSS_COMPILE=/opt/bootlin/riscv64--glibc--bleeding-edge-2020.08-1/bin/riscv64-buildroot-linux-gnu- make -j $(nproc)
 	$ CROSS_COMPILE=/opt/bootlin/riscv64--glibc--bleeding-edge-2020.08-1/bin/riscv64-buildroot-linux-gnu- make install
-    	```
  
  
 ### Create RamDISK
