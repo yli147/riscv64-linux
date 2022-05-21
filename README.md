@@ -3,6 +3,7 @@ This is a initial BKM summary for RSIC-V.
 
 - [RSIC-V Information](#rsic-v-information)
 - [Quick Start Guide RSIC-V Linux on QEMU](#quick-start-guide-rsic-v-linux-on-qemu)
+- [Run Own Cross Compiled Sample Applications](#run-own-cross-compiled-sample-applications)
 
 ## RSIC-V Information
 ### Specs
@@ -147,7 +148,7 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 	cd ../../
     ```
 
-# RUN
+### Boot-UP the Linux System
 1. Lauch Linux in RSICV-QEMU with BusyBox 	
 	```bash
 	$ sudo ./qemu/build/qemu-system-riscv64 -nographic -machine virt -kernel ./linux/arch/riscv/boot/Image -initrd initramfs.cpio.gz -append "root=/dev/vda ro console=ttyS0"
@@ -155,3 +156,27 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 	<img src="imgs/kernel_boot.png" alt="kernel-boot" style="zoom: auto;" />
 	
 	<img src="imgs/busy-box.png" alt="busy-box" style="zoom: auto;" />
+	
+
+## Run Own Cross Compiled Sample Applications
+
+### Build Sample Apps
+	```bash
+	$ cd testcases
+	$ make clean;make
+	```
+	<img src="imgs/build-apps.png" alt="build-apps" style="zoom: auto;" />
+	
+### Append Applications to RamDISK
+1. Append the applciation to RootFs
+	```bash
+	$ echo simple-function.out|cpio -H newc -o|gzip -9 >> ../initramfs.cpio.gz
+	cd ../../
+    ```	
+
+### Boot-UP RamDISK
+1. Lauch Linux and Run Your applciation	
+	```bash
+	$ sudo ./qemu/build/qemu-system-riscv64 -nographic -machine virt -kernel ./linux/arch/riscv/boot/Image -initrd initramfs.cpio.gz -append "root=/dev/vda ro console=ttyS0"
+	```
+	<img src="imgs/hello.png" alt="kernel-boot" style="zoom: auto;" />
