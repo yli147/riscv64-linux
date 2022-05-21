@@ -39,18 +39,21 @@ This is a initial BKM summary for RSIC-V.
 	http://www.openv.cc/archives/1
 	https://programmersought.com/article/4626958334/
 
-1. Either build the toolchain by yourself
+Either build the toolchain by yourself
+```bash
 	https://github.com/riscv-collab/riscv-gnu-toolchain/blob/master/README.md
-    	riscv-binutils: The binary utilities
-    	riscv-dejagnu: The testing framework
-    	riscv-gcc: The core C compiler
-    	riscv-gdb: The GNU debugger
-    	riscv-glibc: The Posix standard C library
-    	riscv-newlib: The bare-metal standard C library	
+	riscv-binutils: The binary utilities
+	riscv-dejagnu: The testing framework
+	riscv-gcc: The core C compiler
+	riscv-gdb: The GNU debugger
+	riscv-glibc: The Posix standard C library
+	riscv-newlib: The bare-metal standard C library	
+```
 
-2. Or Get the latest build from bootlin.
+Or Get the latest build from bootlin.
+```bash
 	https://toolchains.bootlin.com/downloads/releases/toolchains/riscv64/tarballs/riscv64--glibc--bleeding-edge-2020.08-1.tar.bz2
-	
+```	
 
 ## Quick Start Guide RSIC-V Linux on QEMU
 How To Set Up The Environment for RISCV-64 Linux Kernel Development In Ubuntu 20.04.3
