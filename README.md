@@ -108,17 +108,22 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 ### Build BusyBox
 1. Linux v1.31.1
 	```bash
-    $ wget https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+    	$ wget https://busybox.net/downloads/busybox-1.31.1.tar.bz2
 	$ tar jxvf busybox-1.31.1.tar.bz2
 	$ cd busybox-1.31.1
 	   ** Here MUST apply patch https://git.busybox.net/busybox/commit/?id=d3539be8f27b8cbfdfee460fe08299158f08bcd9 to solve the link error
 	$ CROSS_COMPILE=/opt/bootlin/riscv64--glibc--bleeding-edge-2020.08-1/bin/riscv64-buildroot-linux-gnu- make defconfig
 	$ CROSS_COMPILE=/opt/bootlin/riscv64--glibc--bleeding-edge-2020.08-1/bin/riscv64-buildroot-linux-gnu- make menuconfig
 	   ** Build static binary (no shared libs)
+	```	   
+	<img src="imgs/busy-box-config.png" alt="busy-box-config" style="zoom: auto;" />
+	
+	```bash
 	$ CROSS_COMPILE=/opt/bootlin/riscv64--glibc--bleeding-edge-2020.08-1/bin/riscv64-buildroot-linux-gnu- make -j $(nproc)
 	$ CROSS_COMPILE=/opt/bootlin/riscv64--glibc--bleeding-edge-2020.08-1/bin/riscv64-buildroot-linux-gnu- make install
-    ```
-
+    	```
+ 
+ 
 ### Create RamDISK
 1. RAM RootFs
 	```bash
@@ -148,3 +153,6 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 	```bash
 	$ sudo ./qemu/build/qemu-system-riscv64 -nographic -machine virt -kernel ./linux/arch/riscv/boot/Image -initrd initramfs.cpio.gz -append "root=/dev/vda ro console=ttyS0"
 	```
+	<img src="imgs/kernel_boot.png" alt="kernel-boot" style="zoom: auto;" />
+	
+	<img src="imgs/busy-box.png" alt="busy-box" style="zoom: auto;" />
