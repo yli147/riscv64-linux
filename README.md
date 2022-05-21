@@ -70,7 +70,7 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 
 
 ### Prerequisites
-1. Install gcc-riscv64    
+1. Install dependency  
 	```bash
     $ sudo apt install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev git
 	$ sudo apt install libpixman-1-0
