@@ -74,8 +74,6 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 	```bash
     $ sudo apt install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev git
 	$ sudo apt install libpixman-1-0
-	$ sudo apt-get install -y gcc-riscv64-linux-gnu
-	$ sudo apt install -y gcc-riscv64-unknown-elf
 	```
 2. Get the latest build from bootlin
 	```bash
