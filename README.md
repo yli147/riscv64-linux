@@ -33,24 +33,22 @@ This is a initial BKM summary for RSIC-V.
 	https://www.sifive.com/boards/hifive-unmatched
 	https://wiki.debian.org/RISC-V
 	
-### ToolChain Code
+### Cross Compile Toolchain
 	https://github.com/riscv-collab/riscv-gnu-toolchain
-	https://github.com/riscv-collab/riscv-gnu-toolchain/blob/master/README.md
 	http://www.openv.cc/archives/1
-	
-	Compile it manually as described in the following article: https://programmersought.com/article/4626958334/
-Get the latest build from bootlin.
+	https://programmersought.com/article/4626958334/
 
-	# sudo apt install gcc-riscv64-unknown-elf
-	# sudo apt install gcc-riscv64-linux-gnu
-	Other libs to be build in toolchain
+1. Either build the toolchain by yourself
+	https://github.com/riscv-collab/riscv-gnu-toolchain/blob/master/README.md
     	riscv-binutils: The binary utilities
     	riscv-dejagnu: The testing framework
     	riscv-gcc: The core C compiler
     	riscv-gdb: The GNU debugger
     	riscv-glibc: The Posix standard C library
     	riscv-newlib: The bare-metal standard C library	
-	qemu: The RISCV emulator
+
+2. Or Get the latest build from bootlin.
+	https://toolchains.bootlin.com/downloads/releases/toolchains/riscv64/tarballs/riscv64--glibc--bleeding-edge-2020.08-1.tar.bz2
 	
 
 ## Quick Start Guide RSIC-V Linux on QEMU
