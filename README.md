@@ -43,12 +43,12 @@ Get the latest build from bootlin.
 	# sudo apt install gcc-riscv64-unknown-elf
 	# sudo apt install gcc-riscv64-linux-gnu
 	Other libs to be build in toolchain
-    riscv-binutils: The binary utilities
-    riscv-dejagnu: The testing framework
-    riscv-gcc: The core C compiler
-    riscv-gdb: The GNU debugger
-    riscv-glibc: The Posix standard C library
-    riscv-newlib: The bare-metal standard C library	
+    	riscv-binutils: The binary utilities
+    	riscv-dejagnu: The testing framework
+    	riscv-gcc: The core C compiler
+    	riscv-gdb: The GNU debugger
+    	riscv-glibc: The Posix standard C library
+    	riscv-newlib: The bare-metal standard C library	
 	qemu: The RISCV emulator
 	
 
@@ -57,14 +57,14 @@ How To Set Up The Environment for RISCV-64 Linux Kernel Development In Ubuntu 20
 
 ### Operation System
 Linux distribution (Ubuntu 20.04.3 LTS)
-    ```bash
+
 	intel@intel-NUC11PHi7:~/workspace$ lsb_release -a
 	No LSB modules are available.
 	Distributor ID: Ubuntu
 	Description:    Ubuntu 20.04.3 LTS
 	Release:        20.04
 	Codename:       focal
-    ```
+
 
 ### Prerequisites
 1. Install gcc-riscv64    
@@ -106,9 +106,9 @@ Linux distribution (Ubuntu 20.04.3 LTS)
     ```
 
 ### Build BusyBox
-1. Linux v1.31.1
+1. BusyBox v1.31.1
 	```bash
-    	$ wget https://busybox.net/downloads/busybox-1.31.1.tar.bz2
+    $ wget https://busybox.net/downloads/busybox-1.31.1.tar.bz2
 	$ tar jxvf busybox-1.31.1.tar.bz2
 	$ cd busybox-1.31.1
 	   ** Here MUST apply patch https://git.busybox.net/busybox/commit/?id=d3539be8f27b8cbfdfee460fe08299158f08bcd9 to solve the link error
