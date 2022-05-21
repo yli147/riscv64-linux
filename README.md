@@ -165,7 +165,7 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 	$ cd testcases
 	$ make clean;make
 	```
-	<img src="imgs/build_apps.png" alt="build_apps" style="zoom: auto;" />
+<img src="imgs/build_apps.png" alt="build_apps" style="zoom: auto;" />
 	
 ### Append Applications to RamDISK
 1. Append built applciation to RootFs
