@@ -18,6 +18,7 @@ This is a initial BKM summary for RSIC-V.
 	
 
 ### Univerisy Courses:
+	https://riscv.org/learn/university-resources/#tab-1623429604964-0
 	https://cornellcswiki.gitlab.io/classes/CS3410.html
 	
 ### Web ISA Simulators
