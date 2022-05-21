@@ -165,7 +165,7 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 	$ cd testcases
 	$ make clean;make
 	```
-	<img src="imgs/build-apps.png" alt="build-apps" style="zoom: auto;" />
+	<img src="imgs/build_apps.png" alt="build_apps" style="zoom: auto;" />
 	
 ### Append Applications to RamDISK
 1. Append built applciation to RootFs
@@ -179,6 +179,9 @@ Linux distribution (Ubuntu 20.04.3 LTS)
 	```bash
 	$ sudo ./qemu/build/qemu-system-riscv64 -nographic -machine virt -kernel ./linux/arch/riscv/boot/Image -initrd initramfs.cpio.gz -append "root=/dev/vda ro console=ttyS0"
 	```
-	
-	% ./simple-function.out
+
+2. In BusyBox Console:
+	```bash
+	$ ./simple-function.out
+	```
 	<img src="imgs/hello.png" alt="kernel-boot" style="zoom: auto;" />
