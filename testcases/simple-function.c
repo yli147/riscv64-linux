@@ -16,6 +16,6 @@ void fuction()
 int main()
 {
 	fuction();
-	printf("hello world\n");
+	printf("Hello RSICV World, This is Yong!\n");
 	return 0;
 }
