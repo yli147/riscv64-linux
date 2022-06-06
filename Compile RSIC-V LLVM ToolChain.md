@@ -24,15 +24,16 @@ Taken from https://llvm.org/docs/GettingStarted.html.
 
 ### Test the LLVM Toolchain
 ```bash
-   cat >hello.c <<END
-   #include <stdio.h>
-   int main(){
-      printf("Hello RISCV!\n");
-      return 0;
-   }
-   END
-   ../../_install/bin/clang -I ../../../_install/riscv64-unknown-elf/include/ -O -c hello.c
-   ../../../_install/bin/riscv64-unknown-elf-gcc hello.o -o hello -march=rv64imac -mabi=lp64
+cat >hello.c <<END
+#include <stdio.h>
+
+int main(){
+  printf("Hello RISCV!\n");
+  return 0;
+}
+END
+../../_install/bin/clang -I ../../../_install/riscv64-unknown-elf/include/ -O -c hello.c
+../../../_install/bin/riscv64-unknown-elf-gcc hello.o -o hello -march=rv64imac -mabi=lp64
 ```
 
 ### Execute the Compiled Binary in QEMU
