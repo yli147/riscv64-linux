@@ -32,8 +32,8 @@ int main(){
   return 0;
 }
 END
-../../_install/bin/clang -I ../../../_install/riscv64-unknown-elf/include/ -O -c hello.c
-../../../_install/bin/riscv64-unknown-elf-gcc hello.o -o hello -march=rv64imac -mabi=lp64
+../../_install/bin/clang -I ../../_install/riscv64-unknown-elf/include/ -O -c hello.c
+../../_install/bin/riscv64-unknown-elf-gcc hello.o -o hello -march=rv64imac -mabi=lp64
 ```
 
 ### Execute the Compiled Binary in QEMU
