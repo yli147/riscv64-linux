@@ -57,7 +57,9 @@ https://ubuntu.com/tutorials/how-to-install-ubuntu-on-risc-v-hifive-boards
 ### Flashing the Image Via Command Line
 To flash the image to the SD card via the command line, run
 ```
-dd if=</path/to/image.img> of=/dev/mmcblk0 bs=1M status=progress
+wget https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04-preinstalled-server-riscv64+unmatched.img.xz
+xz -dk ubuntu-22.04-preinstalled-server-riscv64+unmatched.img.xz
+dd if=ubuntu-22.04-preinstalled-server-riscv64+unmatched.img of=/dev/mmcblk0 bs=1M status=progress
 ```
 
 ### Booting for the First Time
