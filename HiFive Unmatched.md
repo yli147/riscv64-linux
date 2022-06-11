@@ -77,7 +77,7 @@ sudo shutdown 0
 ```
 
 ### Setting up a Desktop Environment
-Boot the Ubuntu 22.04 from SSD, from the Serial Console
+Use Nvida GT720 graphic card,Boot the Ubuntu 22.04 from SSD, from the Serial Console
 ```
 touch ~/etc/apt/apt.conf
 vim ~/etc/apt/apt.conf
