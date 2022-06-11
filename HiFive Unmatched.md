@@ -27,6 +27,7 @@ make -j$(nproc)
 cd ..
 
 git clone https://github.com/riscv/opensbi.git
+<commit cb8271c8e43e3c317436b7377c4fa0ac669f8fb5>
 cd opensbi/
 make PLATFORM=generic FW_PAYLOAD_PATH=../u-boot/u-boot.bin
 cd ..
