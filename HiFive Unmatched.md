@@ -89,3 +89,4 @@ sudo apt install gnome-shell gnome-shell-extension-appindicator gnome-shell-exte
 <sudo apt install mutter gnome-shell gnome-shell-extension-appindicator gnome-shell-extension-desktop-icons-ng gnome-shell-extension-prefs gnome-shell-extension-ubuntu-dock ubuntu-gnome-wallpapers gnome-terminal>
 <sudo apt install epiphany-browser>
 ```
+And then Reboot, the Ubuntu desktop will come our from the graphic interface
