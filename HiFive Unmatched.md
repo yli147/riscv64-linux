@@ -31,6 +31,7 @@ cd opensbi/
 make PLATFORM=generic FW_PAYLOAD_PATH=../u-boot/u-boot.bin
 cd ..
 
+```
 qemu-system-riscv64 -machine virt -m 1G -nographic \
 -bios opensbi/build/platform/generic/firmware/fw_payload.bin \
 -smp cores=2 -gdb tcp::1234 \
@@ -40,7 +41,15 @@ qemu-system-riscv64 -machine virt -m 1G -nographic \
 -device ich9-ahci,id=ahci -device ide-hd,drive=mydisk,bus=ahci.0 \
 -device virtio-rng-pci
 ```
-
+OR
+```
+qemu-system-riscv64 \
+-machine virt -nographic -m 2048 -smp 4 \
+-bios /usr/lib/riscv64-linux-gnu/opensbi/generic/fw_jump.elf \
+-kernel u-boot/u-boot.bin \
+-device virtio-net-device,netdev=eth0 -netdev user,id=eth0 \
+-drive file=ubuntu-22.04-preinstalled-server-riscv64+unmatched.img,format=raw,if=virtio
+```
 ## Install Image on Unmatched Board
 https://ubuntu.com/tutorials/how-to-install-ubuntu-on-risc-v-hifive-boards
 
