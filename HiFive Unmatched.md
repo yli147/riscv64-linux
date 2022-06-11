@@ -30,6 +30,7 @@ git clone https://github.com/riscv/opensbi.git
 cd opensbi/
 make PLATFORM=generic FW_PAYLOAD_PATH=../u-boot/u-boot.bin
 cd ..
+```
 
 ```
 qemu-system-riscv64 -machine virt -m 1G -nographic \
