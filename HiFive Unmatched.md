@@ -51,6 +51,9 @@ qemu-system-riscv64 \
 -device virtio-net-device,netdev=eth0 -netdev user,id=eth0 \
 -drive file=ubuntu-22.04-preinstalled-server-riscv64+unmatched.img,format=raw,if=virtio
 ```
+** The default /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf version is 2021.1, the system map may not corret, please check the u-boot/System.map
+
+
 ## Install Image on Unmatched Board
 https://ubuntu.com/tutorials/how-to-install-ubuntu-on-risc-v-hifive-boards
 
