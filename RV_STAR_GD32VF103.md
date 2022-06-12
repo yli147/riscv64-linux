@@ -1,10 +1,4 @@
-RV-STAR学习资料 	https://www.rvmcu.com/quickstart-doc-u-rvstar.html
-RV-STAR快速上手 	https://www.rvmcu.com/quickstart-doc-u-rvstar_nucleistudio_quickstart.html
-快速移植ARM程序 	https://www.rvmcu.com/quickstart-doc-u-nuclei_armtoriscv.html
-中断快速入门 	https://www.rvmcu.com/quickstart-doc-u-nuclei_interrupt_quickstart.html
-更多RV-STAR例程 	https://www.rvmcu.com/quickstart-doc-u-rvstar_labs.html
-RV-STAR视频教程 	https://www.rvmcu.com/campus-rvstar-ts-video-id-1.html
-RV-STAR ppt资料 	https://www.rvmcu.com/campus-mcu.html
+
 
     微控制器：GD32VF103VBT6（32位RISC-V处理器）
     内核：芯来科技Bumblebee内核（RV32IMAC）
@@ -27,3 +21,10 @@ RV-STAR ppt资料 	https://www.rvmcu.com/campus-mcu.html
     RGB LED*1
 
 
+    RV-STAR学习资料 	https://www.rvmcu.com/quickstart-doc-u-rvstar.html
+    RV-STAR快速上手 	https://www.rvmcu.com/quickstart-doc-u-rvstar_nucleistudio_quickstart.html
+    快速移植ARM程序 	https://www.rvmcu.com/quickstart-doc-u-nuclei_armtoriscv.html
+    中断快速入门 	https://www.rvmcu.com/quickstart-doc-u-nuclei_interrupt_quickstart.html
+    更多RV-STAR例程 	https://www.rvmcu.com/quickstart-doc-u-rvstar_labs.html
+    RV-STAR视频教程 	https://www.rvmcu.com/campus-rvstar-ts-video-id-1.html
+    RV-STAR ppt资料 	https://www.rvmcu.com/campus-mcu.html
