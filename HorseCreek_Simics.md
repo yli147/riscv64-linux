@@ -30,5 +30,6 @@ tar xf simics-pkg-1000-6.0.137-linux64.tar
 tar xf simics-pkg-2011-6.0.pre6-linux64.tar
 tar xf simics-pkg-2050-6.0.pre38-linux64.tar
 cd simics-6-install
+sudo apt install heimdal-clients
 ./install-simics.pl
 ```
