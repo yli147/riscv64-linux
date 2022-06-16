@@ -34,6 +34,25 @@ This is a initial BKM summary for RSIC-V.
 	https://www.sifive.com/boards/hifive-unmatched
 	https://wiki.debian.org/RISC-V
 	
+	
+### MISC	
+	RISC-V International			Specifications	https://riscv.org/technical/specifications/
+	Official working groups			https://lists.riscv.org/g/main
+	Exchange for HW, SW, services, learning	https://riscv.org/exchange/
+	RISC-V Summit 2021			https://www.youtube.com/playlist?list=PL85jopFZCnbPGAhsdS16Nn4CdX6o1LeZe
+	RISC-V world conference China 2021	https://www.riscv-conf-china.com/ and some videos could be found on bilibili
+	4th RISC-V Meeting Spring 2022 RISC-V Week	"https://open-src-soc.org/2022-05/program-riscv-meeting.html
+						https://www.youtube.com/watch?v=02n5Mdfix0k&list=PL85jopFZCnbNyq_fZDSBBr6A5MSm04VAN"
+	PLCT lab (ISCAS 软件所)			https://github.com/plctlab
+	RISC-V east asia biweekly sync (lead by PLCT)	https://github.com/cnrv/RISCV-East-Asia-Biweekly-Sync
+	SiFive Github group			https://github.com/sifive
+	Debian RISC-V port			https://wiki.debian.org/RISC-V
+	Debian RISC-V mailing list		https://lists.debian.org/debian-riscv/
+	Ubuntu RISC-V				https://wiki.ubuntu.com/RISC-V
+	Fedora RISC-V				https://fedoraproject.org/wiki/Architectures/RISC-V
+		
+		
+		
 ### Cross Compile Toolchain
 	https://github.com/riscv-collab/riscv-gnu-toolchain
 	http://www.openv.cc/archives/1
