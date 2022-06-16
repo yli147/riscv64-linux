@@ -20,6 +20,14 @@ Three Simics packages are needed for Horse Creek platform. Please download these
 Simics Base (1000), version 1000-6.0.137
 RISC-V CPU (2050), version 2050-6.0.pre38
 HorseCreek platform (2011), version 2011-6.0.pre6
+
+Create an account the same name is your idsid in the ubuntu system. The install-simics.pl script will use idsid accout to login. Here my idsid is yli147
+```
+sudo adduser yli147
+sudo usermod -aG sudo yli147
+su yli147
+```
+
 ```
 mkdir ~/simics
 cd ~/simics
@@ -30,6 +38,13 @@ tar xf simics-pkg-1000-6.0.137-linux64.tar
 tar xf simics-pkg-2011-6.0.pre6-linux64.tar
 tar xf simics-pkg-2050-6.0.pre38-linux64.tar
 cd simics-6-install
-sudo apt install heimdal-clients
+sudo apt install krb5-user
+```
+
+Edit /etc/krb5.conf, change [libdefaults] default_realm to default_realm = CCR.CORP.INTEL.COM, or your account's own region.
+
+```
+sudo apt-get install smbclient
 ./install-simics.pl
 ```
+
