@@ -48,3 +48,37 @@ sudo apt-get install smbclient
 ./install-simics.pl
 ```
 
+## Create Horse Creek project
+```
+cd ~/simics
+./simics-6/simics-6.0.137/bin/project-setup hrc
+mkdir hrc/targets/riscv-horsecreek/images
+git clone https://github.com/xzhangxa/applications.simulators.simics.platform-sw.buildroot.git -b dev
+cd ./applications.simulators.simics.platform-sw.buildroot
+git checkout -m ce485e48d1b4562b308f7f5680e9eceff0d9b027
+make horsecreek_defconfig
+make
+cp output/images/Image ~/simics/hrc/targets/riscv-horsecreek/images
+cp output/images/horsecreek.dtb ~/simics/hrc/targets/riscv-horsecreek/images
+
+# Build opensbi fw_jump.bin
+cd ..
+git clone https://github.com/riscv-software-src/opensbi.git
+cd opensbi
+export CROSS_COMPILE=riscv64-linux-gnu-
+make PLATFORM=generic FW_JUMP_ADDR=0x2000200000 FW_JUMP_FDT_ADDR=0x2002200000
+cp build/platform/generic/firmware/fw_jump.bin ~/simics/hrc/targets/riscv-horsecreek/images
+```
+
+## Modify target file for final setup
+Copy the Debian image to the ~/simics/hrc/targets/riscv-horsecreek/images
+```
+cp ~/simics/simics-6/simics-6.0.137/../simics-riscv-horsecreek-6.0.pre6/targets/riscv-horsecreek/* ~/simics/hrc/targets/riscv-horsecreek/
+```
+Modify the file ~/simics/hrc/targets/riscv-horsecreek/linux.simics to add line default sata_disk_image = "%simics%/targets/riscv-horsecreek/images/debian-sid-riscv.img" under params from "%simics%/targets/riscv-horsecreek/system.include".
+
+## Run
+In VNC environment
+```
+./simics-gui targets/riscv-horsecreek/linux.simics
+```
