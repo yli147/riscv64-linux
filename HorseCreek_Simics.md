@@ -80,5 +80,6 @@ Modify the file ~/simics/hrc/targets/riscv-horsecreek/linux.simics to add line d
 ## Run
 In VNC environment
 ```
+cd ~/simics/hrc
 ./simics-gui targets/riscv-horsecreek/linux.simics
 ```
