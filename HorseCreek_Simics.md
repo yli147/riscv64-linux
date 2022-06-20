@@ -62,8 +62,10 @@ make
 cp output/images/Image ~/simics/hrc/targets/riscv-horsecreek/images
 cp output/images/horsecreek.dtb ~/simics/hrc/targets/riscv-horsecreek/images
 
+Copy the Debian image to the ~/simics/hrc/targets/riscv-horsecreek/images
+
 (optional) Copy extra modules to the image: use Debian image as example, and assume /dev/loop0 is mapped
-sudo losetup --partscan --find --show debian-sid-riscv.img
+sudo losetup --partscan --find --show ~/simics/hrc/targets/riscv-horsecreek/images
 mkdir rootfs
 sudo mount /dev/loop0p1 rootfs
 sudo cp -r output/target/lib/modules/5.17.0 ./rootfs/lib/modules
@@ -81,7 +83,7 @@ cp build/platform/generic/firmware/fw_jump.bin ~/simics/hrc/targets/riscv-horsec
 ```
 
 ## Modify target file for final setup
-Copy the Debian image to the ~/simics/hrc/targets/riscv-horsecreek/images
+Make sure the Debian image to the ~/simics/hrc/targets/riscv-horsecreek/images
 ```
 cp ~/simics/simics-6/simics-6.0.137/../simics-riscv-horsecreek-6.0.pre6/targets/riscv-horsecreek/* ~/simics/hrc/targets/riscv-horsecreek/
 ```
