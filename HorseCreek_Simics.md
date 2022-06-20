@@ -53,18 +53,29 @@ sudo apt-get install smbclient
 cd ~/simics
 ./simics-6/simics-6.0.137/bin/project-setup hrc
 mkdir hrc/targets/riscv-horsecreek/images
+
 git clone https://github.com/xzhangxa/applications.simulators.simics.platform-sw.buildroot.git -b dev
 cd ./applications.simulators.simics.platform-sw.buildroot
-git checkout -m ce485e48d1b4562b308f7f5680e9eceff0d9b027
-make horsecreek_defconfig
+make horsecreek_debian_defconfig
+Or, build the kernel based on Ubuntu's kernel configs
+make horsecreek_ubuntu_defconfig
 make
 cp output/images/Image ~/simics/hrc/targets/riscv-horsecreek/images
 cp output/images/horsecreek.dtb ~/simics/hrc/targets/riscv-horsecreek/images
 
-# Build opensbi fw_jump.bin
+(optional) Copy extra modules to the image: use Debian image as example, and assume /dev/loop0 is mapped
+sudo losetup --partscan --find --show debian-sid-riscv.img
+mkdir rootfs
+sudo mount /dev/loop0p1 rootfs
+sudo cp -r output/target/lib/modules/5.17.0 ./rootfs/lib/modules
+sudo umount rootfs
+rm -r rootfs
+sudo losetup -d /dev/loop0
+
 cd ..
 git clone https://github.com/riscv-software-src/opensbi.git
 cd opensbi
+git checkout -m 48f91ee9c960f048c4a7d1da4447d31e04931e38
 export CROSS_COMPILE=riscv64-linux-gnu-
 make PLATFORM=generic FW_JUMP_ADDR=0x2000200000 FW_JUMP_FDT_ADDR=0x2002200000
 cp build/platform/generic/firmware/fw_jump.bin ~/simics/hrc/targets/riscv-horsecreek/images
