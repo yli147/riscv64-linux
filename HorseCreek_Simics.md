@@ -77,9 +77,35 @@ cp ~/simics/simics-6/simics-6.0.137/../simics-riscv-horsecreek-6.0.pre6/targets/
 ```
 Modify the file ~/simics/hrc/targets/riscv-horsecreek/linux.simics to add line default sata_disk_image = "%simics%/targets/riscv-horsecreek/images/debian-sid-riscv.img" under params from "%simics%/targets/riscv-horsecreek/system.include".
 
-## Run
-In VNC environment
+## Run in Linux
+In SSH or VNC environment
 ```
 cd ~/simics/hrc
-./simics-gui targets/riscv-horsecreek/linux.simics
+unset DISPLAY
+./simics targets/riscv-horsecreek/linux.simics
+ simics> run
+After bootup
+ simics> board.console.con.host-serial-setup
+A visual pts device will be opened eg:
+[board.console.con info] Device opened: /dev/pts/4
+"/dev/pts/4"
+ ```
+From another console 
 ```
+minicom -D /dev/pts/4 -s 115200
+```
+
+## Run in Windows
+
+Down the simics x64 installer from https://wiki.ith.intel.com/display/Simics/Simics+Package+Manager
+Install the simics-pkg-1000-6.0.137， simics-pkg-2011-6.0.pre6，simics-pkg-2050-6.0 in "Intel Simics Package Manager"
+Create horse-creek project in "My Projects"  with RISCV-HorseCreek(2011) and RISC-V-CPU(2050) packages selected
+Copy all the riscv-horsecreek from linux system to the targets/riscv-horsecreek
+Open the PowerShell
+```
+cd to the simics folder
+./simics targets/riscv-horsecreek/linux.simics
+ simics> run
+After bootup, double the board.uart0 in the second prompted simics window
+```
+
