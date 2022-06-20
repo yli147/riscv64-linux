@@ -111,4 +111,4 @@ cd to the simics folder
  simics> run
 After bootup, double the board.uart0 in the second prompted simics window
 ```
-
+<img src="imgs/simics_run.png" alt="simics_run" style="zoom: auto;" />
