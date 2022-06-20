@@ -109,6 +109,6 @@ Copy all the riscv-horsecreek from linux system to the targets/riscv-horsecreek 
 cd to the simics folder
 ./simics targets/riscv-horsecreek/linux.simics
  simics> run
-After bootup, double the board.uart0 in the second prompted simics window
+After bootup, double click the board.uart0 in the second prompted simics window
 ```
 <img src="imgs/simics_run.png" alt="simics_run" style="zoom: auto;" />
