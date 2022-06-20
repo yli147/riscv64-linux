@@ -98,10 +98,13 @@ minicom -D /dev/pts/4 -s 115200
 ## Run in Windows
 
 Down the simics x64 installer from https://wiki.ith.intel.com/display/Simics/Simics+Package+Manager
+
 Install the simics-pkg-1000-6.0.137， simics-pkg-2011-6.0.pre6，simics-pkg-2050-6.0 in "Intel Simics Package Manager"
+
 Create horse-creek project in "My Projects"  with RISCV-HorseCreek(2011) and RISC-V-CPU(2050) packages selected
-Copy all the riscv-horsecreek from linux system to the targets/riscv-horsecreek
-Open the PowerShell
+<img src="imgs/simics_manager.png" alt="simics_manager" style="zoom: auto;" />
+
+Copy all the riscv-horsecreek from linux system to the targets/riscv-horsecreek and Open the PowerShell
 ```
 cd to the simics folder
 ./simics targets/riscv-horsecreek/linux.simics
