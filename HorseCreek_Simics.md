@@ -2,10 +2,8 @@
 ## Build Debian RISC-V Port Image
 ```
 git clone git@github.com:intel-sandbox/xzhang84.riscv-rootfs-builder.git
-git checkout -m 4bff6863950fd2914ce7d895c85ed14112a31c11
-cd scripts/
-wget -c http://http.us.debian.org/debian/pool/main/d/debian-ports-archive-keyring/debian-ports-archive-keyring_2022.02.15_all.deb
-sudo apt-get install ./debian-ports-archive-keyring_2022.02.15_all.deb
+git checkout -m e267cac3b5d6d323ea48f09ff3bfa0416fea8eb6
+cd thirdparty/debian
 ./create_debian_image.sh
 ```
 The image debian-sid-riscv.img will be created. Please note currently for Debian RISC-V is not an official architecture, so the image is based on Debian Unstable release.
@@ -56,6 +54,7 @@ mkdir hrc/targets/riscv-horsecreek/images
 
 git clone https://github.com/xzhangxa/applications.simulators.simics.platform-sw.buildroot.git -b dev
 cd ./applications.simulators.simics.platform-sw.buildroot
+git checkout -m cafe8c0d1a182d84a25f5a277921ffc900c11c76
 make horsecreek_debian_defconfig
 Or, build the kernel based on Ubuntu's kernel configs
 make horsecreek_ubuntu_defconfig
@@ -103,7 +102,7 @@ A visual pts device will be opened eg:
  ```
 From another console 
 ```
-minicom -D /dev/pts/4 -s 115200
+sudo minicom -D /dev/pts/4 -s 115200
 ```
 
 ## Run in Windows
