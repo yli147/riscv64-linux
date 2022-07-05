@@ -22,6 +22,8 @@ repo init -u https://github.com/riscv/meta-riscv  -b master -m tools/manifests/r
 repo sync
 repo start work --all
 . ./meta-riscv/setup.sh
+sudo vim ../recipes-bsp/u-boot/u-boot-starfive_v2021.04.bb
+  - Change Fedora_VIC_7100_2021.04 to Fedora_JH7100_2021.04
 MACHINE=qemuriscv64 bitbake core-image-full-cmdline
 ```
 
